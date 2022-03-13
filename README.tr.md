@@ -30,7 +30,7 @@ Yeni bir acl oluşturacağız ve adını **MtaJS** koyacağız. İçerisine iki 
         <object name="resource.MtaJS"></object>
     </group>
 ```
-Yeni bir grup oluşturuyoruz ve içerisine **Admin** ve **MtaJS** ACL'lerini  ekliyoruz.
+Yeni bir grup oluşturuyoruz ve içerisine **Admin** ve **MtaJS** ACL'lerini ekliyoruz.
 > En yetkili ACL, tüm yetkilerin olduğu acl olmalıdır. Eğer sunucunuzun Admin ACL'si oynanmış ise hatalar oluşabilir.
 
 ## Step Four
@@ -41,8 +41,8 @@ Son adım, **resources** klasörüne **MtaJS** scriptini ekliyoruz.
 # Step One
 Modül, hesapları uygulama gibi kullanarak çalışmaktadır. Bu yüzden her uygulama için bir hesap açılmalıdır.
 - [Kod ile hesap oluşturabilirsiniz](https://wiki.multitheftauto.com/wiki/AddAccount)
-- Sunucu konsolu ile hesap oluşturmak için `addaccount <name> <password>` kullanabilirsiniz. Örnek: `addaccount TestBot iloveyou`
-- Oyunda `/register <name> <password>` komudunu kullanabilirsiniz.
+- Sunucu konsolu ile hesap oluşturmak için `addaccount <name> <password>` komutunu kullanabilirsiniz. Örnek: `addaccount TestBot iloveyou`
+- Oyunda `/register <name> <password>` komutunu kullanabilirsiniz.
 - Eğer login scriptiniz var ise onu kullanarak yeni hesap oluşturabilirsiniz.
 # Step Two
 ```xml
