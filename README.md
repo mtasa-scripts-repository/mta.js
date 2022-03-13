@@ -37,7 +37,7 @@ Yeni bir grup oluşturuyoruz ve içerisine **Admin** ve **MtaJS** ACL'lerini  ek
 Son adım, **resources** klasörüne **MtaJS** scriptini ekliyoruz.
 > **Script adını değiştirmek, sistemin çalışmasını engellemektedir. Lütfen scriptin adını değiştirmeyiniz.**
 
-# Add an app
+# Create an app
 # Step One
 Modül, hesapları uygulama gibi kullanarak çalışmaktadır. Bu yüzden her uygulama için bir hesap açılmalıdır.
 - [Kod ile hesap oluşturabilirsiniz](https://wiki.multitheftauto.com/wiki/AddAccount)
