@@ -1,6 +1,6 @@
 # Installing
 Modülün kurulumu sırasında yapılması gerekli olan adımları içerir.
-## Step one
+## Step One
 MTA sunucusunun **acl.xml** dosyasına birkaç küçük ekleme yapacağız.
 
 ```xml
@@ -36,3 +36,21 @@ Yeni bir grup oluşturuyoruz ve içerisine **Admin** ve **MtaJS** ACL'lerini  ek
 ## Step Four
 Son adım, **resources** klasörüne **MtaJS** scriptini ekliyoruz.
 > **Script adını değiştirmek, sistemin çalışmasını engellemektedir. Lütfen scriptin adını değiştirmeyiniz.**
+
+# Add an app
+# Step One
+Modül, hesapları uygulama gibi kullanarak çalışmaktadır. Bu yüzden her uygulama için bir hesap açılmalıdır.
+- [Kod ile hesap oluşturabilirsiniz](https://wiki.multitheftauto.com/wiki/AddAccount)
+- Console ile hesap oluşturmak için `addaccount <name> <password>` kullanabilirsiniz. Örnek: `addaccount TestBot iloveyou`
+- Oyunda `/register <name> <password>` komudunu kullanabilirsiniz.
+- Eğer login scriptiniz var ise onu kullanarak yeni hesap oluşturabilirsiniz.
+# Step Two
+```xml
+    <group name="MtaJS">
+        <acl name="MtaJS"></acl>
+        <acl name="Admin"></acl> <!-- En Yetkili ACL !-->
+        <object name="resource.MtaJS"></object>
+        <object name="user.TestBot"></object>
+    </group>
+```
+Uygulamamızı acl'ye ekliyoruz.
