@@ -1,6 +1,6 @@
-# Installing
+# Kurulum
 Modülün kurulumu sırasında yapılması gerekli olan adımları içerir.
-## Step One
+## Adım bir
 MTA sunucusunun **acl.xml** dosyasına birkaç küçük ekleme yapacağız.
 
 ```xml
@@ -12,7 +12,7 @@ Default isimli acl'ye yeni bir kural ekleyeğiz.
 Bu kural **yetkilendirme** için oldukça önemlidir.
 > Bu Kuralı eklemezseniz herkes sistemi kullanabilir ve sunucunuza tam erişim izni alabilir!
 
-## Step Two
+## Adım iki
 ```xml
 <acl name="MtaJS">
    <right name="function.fetchRemote" access="true"></right>
@@ -22,7 +22,7 @@ Bu kural **yetkilendirme** için oldukça önemlidir.
 Yeni bir acl oluşturacağız ve adını **MtaJS** koyacağız. İçerisine iki tane kural ekliyoruz.<br>
 > Bu kurallar sunucu ile istemci arası iletişimi sağlamaktadır.
 
-## Step Three
+## Adım üç
 ```xml
     <group name="MtaJS">
         <acl name="MtaJS"></acl>
@@ -33,18 +33,18 @@ Yeni bir acl oluşturacağız ve adını **MtaJS** koyacağız. İçerisine iki 
 Yeni bir grup oluşturuyoruz ve içerisine **Admin** ve **MtaJS** ACL'lerini ekliyoruz.
 > En yetkili ACL, tüm yetkilerin olduğu acl olmalıdır. Eğer sunucunuzun Admin ACL'si oynanmış ise hatalar oluşabilir.
 
-## Step Four
+## Adım dört
 Son adım, **resources** klasörüne **MtaJS** scriptini ekliyoruz.
 > **Script adını değiştirmek, sistemin çalışmasını engellemektedir. Lütfen scriptin adını değiştirmeyiniz.**
 
-# Create an app
-# Step One
+# Uygulama Oluşturma
+# Adım bir
 Modül, hesapları uygulama gibi kullanarak çalışmaktadır. Bu yüzden her uygulama için bir hesap açılmalıdır.
 - [Kod ile hesap oluşturabilirsiniz](https://wiki.multitheftauto.com/wiki/AddAccount)
 - Sunucu konsolu ile hesap oluşturmak için `addaccount <name> <password>` komutunu kullanabilirsiniz. Örnek: `addaccount TestBot iloveyou`
 - Oyunda `/register <name> <password>` komutunu kullanabilirsiniz.
 - Eğer login scriptiniz var ise onu kullanarak yeni hesap oluşturabilirsiniz.
-# Step Two
+# Adım iki
 ```xml
     <group name="MtaJS">
         <acl name="MtaJS"></acl>
@@ -56,7 +56,7 @@ Modül, hesapları uygulama gibi kullanarak çalışmaktadır. Bu yüzden her uy
 Uygulamamızı acl'ye ekliyoruz.
 >  Eğer sunucunuz açık ise sunucu konsoluna `reloadacl` yazarak acl'yi yenilemeniz gerekmektedir.
 
-# Create First App
+# İlk Uygulama
 ```js
 const Mta = require('mta.js')
 const client = new Mta.Client("serverIP", serverPort);
