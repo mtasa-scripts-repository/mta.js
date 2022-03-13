@@ -58,7 +58,7 @@ Uygulamamızı acl'ye ekliyoruz.
 
 # Create First App
 ```js
-const Mta = //require('mta.js')
+const Mta = require('mta.js')
 const client = new Mta.Client("serverIP", serverPort);
 
 client.on('ready', _ => {
