@@ -72,7 +72,7 @@ client.on('onPlayerChat', (player, message, messageType) => {
 })
 
 client.Login('TestBot', "iloveyou", 1042, false).then(status => {
-    console.log("\x1b[32mListening server on\x1b[37m",client.Http.EndPoints.Port,"\x1b[32mport.","\x1b[0m")
+    console.log("Listening server on", client.Http.EndPoints.Port, "port.")
 })
 ```
 > **Client.Login işleminde uygulama ile sunucunuz aynı makinada çalışıyorsa en sondaki değeri true olarak ayarlayınız.**
