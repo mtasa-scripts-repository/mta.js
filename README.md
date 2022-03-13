@@ -57,3 +57,26 @@ Uygulamamızı acl'ye ekliyoruz.
 >  Eğer sunucunuz açık ise sunucu konsoluna `reloadacl` yazarak acl'yi yenilemeniz gerekmektedir.
 
 # Create First App
+```js
+const Mta = //require('mta.js')
+const client = new Mta.Client("serverIP", serverPort);
+
+client.on('ready', _ => {
+    client.Initilaze([
+        "onPlayerChat"
+    ])
+})
+
+client.on('onPlayerChat', (player, message, messageType) => {
+    console.log(`${player.Name}: ${message}`)
+})
+
+client.Login('TestBot', "iloveyou", 1042, false).then(status => {
+    console.log("\x1b[32mListening server on\x1b[37m",client.Http.EndPoints.Port,"\x1b[32mport.","\x1b[0m")
+})
+```
+> **Client.Login işleminde uygulama ile sunucunuz aynı makinada çalışıyorsa en sondaki değeri true olarak ayarlayınız.**
+
+> Kullandığınız eventleri Initilaze etmeniz gerekmektedir. **Yapmazsanız eventleriniz işlenmez.**
+
+> **Initilaze işlemini client.ready eventi çağrıldığında veya çağrıldıktan sonra yapmalısınız!**
