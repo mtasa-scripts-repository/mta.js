@@ -41,7 +41,7 @@ Son adım, **resources** klasörüne **MtaJS** scriptini ekliyoruz.
 # Step One
 Modül, hesapları uygulama gibi kullanarak çalışmaktadır. Bu yüzden her uygulama için bir hesap açılmalıdır.
 - [Kod ile hesap oluşturabilirsiniz](https://wiki.multitheftauto.com/wiki/AddAccount)
-- Console ile hesap oluşturmak için `addaccount <name> <password>` kullanabilirsiniz. Örnek: `addaccount TestBot iloveyou`
+- Sunucu konsolu ile hesap oluşturmak için `addaccount <name> <password>` kullanabilirsiniz. Örnek: `addaccount TestBot iloveyou`
 - Oyunda `/register <name> <password>` komudunu kullanabilirsiniz.
 - Eğer login scriptiniz var ise onu kullanarak yeni hesap oluşturabilirsiniz.
 # Step Two
@@ -54,3 +54,6 @@ Modül, hesapları uygulama gibi kullanarak çalışmaktadır. Bu yüzden her uy
     </group>
 ```
 Uygulamamızı acl'ye ekliyoruz.
+>  Eğer sunucunuz açık ise sunucu konsoluna `reloadacl` yazarak acl'yi yenilemeniz gerekmektedir.
+
+# Create First App
